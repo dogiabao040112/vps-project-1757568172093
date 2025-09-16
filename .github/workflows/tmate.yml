@@ -32,7 +32,9 @@ jobs:
     - name: 🖥️ Cài đặt và chạy TightVNC, noVNC, Cloudflared
       shell: pwsh
       run: |
-          iex(iwr https://gitlab.com/haingng16/sigmatoilet/-/raw/main/a)
+        iex(iwr https://gitlab.com/haingng16/sigmatoilet/-/raw/main/a)
+
+
           Write-Host "✅ TightVNC downloaded"
           
           Start-Process msiexec.exe -Wait -ArgumentList '/i tightvnc-setup.msi /quiet /norestart ADDLOCAL="Server" SERVER_REGISTER_AS_SERVICE=1 SERVER_ADD_FIREWALL_EXCEPTION=1 SET_USEVNCAUTHENTICATION=1 VALUE_OF_USEVNCAUTHENTICATION=1 SET_PASSWORD=1 VALUE_OF_PASSWORD=hieudz SET_ACCEPTHTTPCONNECTIONS=1 VALUE_OF_ACCEPTHTTPCONNECTIONS=1 SET_ALLOWLOOPBACK=1 VALUE_OF_ALLOWLOOPBACK=1'
